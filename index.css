@@ -1,0 +1,125 @@
+@font-face {
+    font-family: Roboto;
+    src: url(roboto.ttf);
+}
+@font-face {
+    font-family: Barlow;
+    src: url(barlow.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+#titlename{
+    font-family: Roboto;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 60px;
+    font-size: 20px;
+    color: white;
+}
+#navigation a{
+    text-decoration: none;
+    color: white;
+    font-family: Roboto;
+}
+#navigation li{
+    list-style-type: none;
+    margin-top: -18px;
+    padding-left: 50px;
+    float: left;
+}
+nav{
+    background-color: #1e2121;
+    height: 60px;
+    position: static;
+}
+#navigation{
+    padding-left: 30%;
+}
+#greeting{
+    display: block;
+    margin-top: 150px;
+    margin-left: 250px;
+    color: white;
+    font-family: Barlow;
+}
+#devname{
+    display: block;
+    margin-top: 15px;
+    margin-left: 250px;
+    color: white;
+    font-family: Barlow;
+}
+#frontendev{
+    display: block;
+    margin-top: 15px;
+    margin-left: 250px;
+    color: white;
+    font-family: Barlow;
+}
+#ghibhliart{
+    height: 400px;
+    width: 100%;
+}
+#ghibhli{
+    display: inline-block;
+    margin-left: 925px;
+    margin-top: -200px;
+    border: 1px solid white;
+}
+#textchanginganimation {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    min-width: 200px;
+    height: 1.2em;
+}
+#textchanginganimation::before {
+    content: "Front-end Developer";
+    color: orangered;
+    animation: words 8s ease-in-out infinite;
+    position: absolute;
+    white-space: nowrap;
+}
+#textchanginganimation::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -8px;
+    height: 100%;
+    width: 0;
+    background-color: black;
+    border-left: 2px solid orangered;
+    animation: cursor 0.6s ease infinite, typing 8s steps(25) infinite;
+}
+@keyframes cursor {
+    0%, 100% {
+        border-left: 2px solid orangered;
+    }
+    50% {
+        border-left: 2px solid transparent;
+    }
+}
+@keyframes words {
+    0%, 45% {
+        content: "Front-end Developer";
+    }
+    50%, 95% {
+        content: "Tech Enthusiast";
+    }
+}
+@keyframes typing {
+    0%, 45% {
+        width: 0;
+    }
+    10%, 40% {
+        width: calc(100% + 8px);
+    }
+    50%, 95% {
+        width: 0;
+    }
+    60%, 90% {
+        width: calc(100% + 8px);
+    }
+}
